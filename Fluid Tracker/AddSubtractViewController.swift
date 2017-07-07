@@ -24,7 +24,7 @@ class AddSubtractViewController: UIViewController, UITextFieldDelegate {
     // And how to change the view
     var addOrSubtract: String!
     
-    // These are used either to get the data from them
+    // These are to get the data from them
     // Or change their data for different views
     @IBOutlet var topLabel: UILabel!
     @IBOutlet var addSubtractButton: UIButton!
@@ -62,7 +62,7 @@ class AddSubtractViewController: UIViewController, UITextFieldDelegate {
         else if addOrSubtract == "ChangeGoal" {
             topLabel.text = "Fluid goal:"
             addSubtractButton.setTitle("Confirm", for: .normal)
-            fluidField.text = "FluidGoal"
+            fluidField.text = ""
             self.heightConstraint.constant = 145
             self.textFieldBottom.constant = 20
         }

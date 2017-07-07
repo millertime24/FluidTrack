@@ -19,6 +19,7 @@
 		CE32F9901F0D3B6800C23C6E /* CellButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE32F9891F0D3B6800C23C6E /* CellButton2.png */; };
 		CE32F9911F0D3B6800C23C6E /* MinusButton3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE32F98A1F0D3B6800C23C6E /* MinusButton3.png */; };
 		CE32F9921F0D3B6800C23C6E /* PlusButton3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE32F98B1F0D3B6800C23C6E /* PlusButton3.png */; };
+		CE41147F1F0EA7CB0079771B /* UnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41147E1F0EA7CB0079771B /* UnitViewController.swift */; };
 		CE7AA5931F0D7E4B006D6FDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA5921F0D7E4B006D6FDE /* ViewController.swift */; };
 		CE7AA5951F0D7E90006D6FDE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA5941F0D7E90006D6FDE /* HistoryViewController.swift */; };
 		CE7AA5971F0D7F06006D6FDE /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA5961F0D7F06006D6FDE /* CircularProgressBar.swift */; };
@@ -42,6 +43,7 @@
 		CE32F9891F0D3B6800C23C6E /* CellButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellButton2.png; sourceTree = "<group>"; };
 		CE32F98A1F0D3B6800C23C6E /* MinusButton3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton3.png; sourceTree = "<group>"; };
 		CE32F98B1F0D3B6800C23C6E /* PlusButton3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusButton3.png; sourceTree = "<group>"; };
+		CE41147E1F0EA7CB0079771B /* UnitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitViewController.swift; sourceTree = "<group>"; };
 		CE7AA5921F0D7E4B006D6FDE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE7AA5941F0D7E90006D6FDE /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		CE7AA5961F0D7F06006D6FDE /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				CE32F9701F0D3AC200C23C6E /* AppDelegate.swift */,
 				CE32F9741F0D3AC200C23C6E /* Main.storyboard */,
+				CE41147E1F0EA7CB0079771B /* UnitViewController.swift */,
 				CE7AA5961F0D7F06006D6FDE /* CircularProgressBar.swift */,
 				CE7AA5981F0D7F22006D6FDE /* AddSubtractViewController.swift */,
 				CE7AA59A1F0D7F70006D6FDE /* HistoryCell.swift */,
@@ -194,6 +197,7 @@
 			files = (
 				CE7AA5991F0D7F22006D6FDE /* AddSubtractViewController.swift in Sources */,
 				CE7AA59B1F0D7F70006D6FDE /* HistoryCell.swift in Sources */,
+				CE41147F1F0EA7CB0079771B /* UnitViewController.swift in Sources */,
 				CE7AA5931F0D7E4B006D6FDE /* ViewController.swift in Sources */,
 				CE32F9711F0D3AC200C23C6E /* AppDelegate.swift in Sources */,
 				CE32F9791F0D3AC200C23C6E /* Fluid_Tracker.xcdatamodeld in Sources */,

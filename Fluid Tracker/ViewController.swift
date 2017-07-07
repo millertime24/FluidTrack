@@ -31,11 +31,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var fluidUnit: UILabel!
     
+
     
     
     // Variables represented on the labels
     var fluidGoal: Int = 100
     var fluidConsumed: Int = 0
+    var ounces = "oz"
+    var mil = "ml"
     
     // The store of days for the history
     var days: [NSManagedObject] = []
@@ -57,7 +60,7 @@ class ViewController: UIViewController {
         radialFluids.theStrokeEnd = 0
         fluidGoal = 100
         fluidsConsumedLabel.text = "0"
-        fluidsRemainingLabel.text = "100 fluids left"
+        fluidsRemainingLabel.text = "100 remaining"
         calculateAverage()
         
         // This just returns the current date in Weekday, Month Day format
@@ -169,7 +172,7 @@ class ViewController: UIViewController {
     // Used to update all the labels when they're changed
     func updateLabels() {
         fluidsConsumedLabel.text = String(fluidConsumed)
-        fluidsRemainingLabel.text = String(fluidGoal - fluidConsumed) + " fluids left"
+        fluidsRemainingLabel.text = String(fluidGoal - fluidConsumed) + " remaining"
         let completeness: Double = Double(fluidConsumed) / Double(fluidGoal)
         radialFluids.animateStrokeEnd(toStroke: CGFloat(completeness))
         fluidGoalLabel.text = String(fluidGoal)

@@ -107,12 +107,6 @@
                                     <constraint firstItem="bwG-7m-Tfi" firstAttribute="top" secondItem="aD1-oN-BMY" secondAttribute="top" constant="32" id="lii-xS-gkg"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Fluid left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2A-hB-OKu" userLabel="Fluid Remaining Label">
-                                <rect key="frame" x="63" y="625" width="249" height="24"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.55435041240000005" green="0.55435041240000005" blue="0.55435041240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoS-UE-bx7" userLabel="1Button">
                                 <rect key="frame" x="0.0" y="501" width="375" height="53"/>
                                 <constraints>
@@ -177,6 +171,9 @@
                                     <constraint firstAttribute="height" constant="53" id="J5Y-Mn-4Lh"/>
                                 </constraints>
                                 <state key="normal" image="CellButton3.png"/>
+                                <connections>
+                                    <segue destination="OoY-Bv-AJ8" kind="presentation" id="coD-Zv-eNN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Unit of measure:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQi-c1-4Mr">
                                 <rect key="frame" x="16" y="464" width="111" height="21"/>
@@ -188,14 +185,21 @@
                                 <color key="textColor" red="0.42376053330000002" green="0.42410343890000002" blue="0.42381370070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="OZ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-QY-WKi">
-                                <rect key="frame" x="322" y="457" width="23" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="oz" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-QY-WKi">
+                                <rect key="frame" x="325" y="457" width="20" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="VHf-W0-0Qc"/>
                                     <constraint firstAttribute="height" constant="34" id="y7m-B5-7Xg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMS-vA-gIA">
+                                <rect key="frame" x="43" y="625" width="288" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.55435041240000005" green="0.55435041240000005" blue="0.55435041240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -222,7 +226,6 @@
                             <constraint firstItem="WrQ-AB-Job" firstAttribute="leading" secondItem="Gai-5q-NWa" secondAttribute="leading" id="UGk-Lh-l0I"/>
                             <constraint firstItem="HCI-DT-lqU" firstAttribute="top" secondItem="pkQ-YL-5pA" secondAttribute="bottom" constant="5" id="Ua5-OG-xZ7"/>
                             <constraint firstItem="HCI-DT-lqU" firstAttribute="top" secondItem="bQx-8d-cQs" secondAttribute="bottom" constant="24" id="Upq-Cl-Zsr"/>
-                            <constraint firstItem="HCI-DT-lqU" firstAttribute="leading" secondItem="g2A-hB-OKu" secondAttribute="trailing" constant="8" id="Vex-Zi-EAt"/>
                             <constraint firstItem="yc0-re-72F" firstAttribute="leading" secondItem="Gai-5q-NWa" secondAttribute="leadingMargin" id="XLE-Ob-6fC"/>
                             <constraint firstItem="pkQ-YL-5pA" firstAttribute="top" secondItem="Xpv-ho-UoX" secondAttribute="bottom" constant="9" id="akJ-et-NX8"/>
                             <constraint firstItem="l6E-bB-vKX" firstAttribute="leading" secondItem="Gai-5q-NWa" secondAttribute="leading" id="alZ-EJ-Syy"/>
@@ -230,13 +233,11 @@
                             <constraint firstItem="6ud-ew-MKy" firstAttribute="top" secondItem="l6E-bB-vKX" secondAttribute="bottom" id="c1I-1o-A6g"/>
                             <constraint firstAttribute="trailing" secondItem="pkQ-YL-5pA" secondAttribute="trailing" id="cOi-6q-rbd"/>
                             <constraint firstAttribute="trailing" secondItem="WrQ-AB-Job" secondAttribute="trailing" id="do3-lT-3gS"/>
-                            <constraint firstItem="6ud-ew-MKy" firstAttribute="top" secondItem="g2A-hB-OKu" secondAttribute="bottom" constant="18" id="fjm-Yc-CSc"/>
                             <constraint firstItem="EbH-QY-WKi" firstAttribute="centerY" secondItem="uQi-c1-4Mr" secondAttribute="centerY" id="g3L-GF-R8s"/>
                             <constraint firstItem="ebg-gP-cND" firstAttribute="leading" secondItem="Gai-5q-NWa" secondAttribute="leading" constant="5" id="kS6-l5-nwW"/>
                             <constraint firstItem="pkQ-YL-5pA" firstAttribute="leading" secondItem="Gai-5q-NWa" secondAttribute="leading" id="knN-gt-zaF"/>
                             <constraint firstItem="HCI-DT-lqU" firstAttribute="top" secondItem="CoS-UE-bx7" secondAttribute="bottom" constant="58" id="mqn-wb-gVD"/>
                             <constraint firstItem="GJy-EU-YRg" firstAttribute="leading" secondItem="bQx-8d-cQs" secondAttribute="trailing" constant="5" id="npe-RO-9yN"/>
-                            <constraint firstItem="g2A-hB-OKu" firstAttribute="leading" secondItem="ebg-gP-cND" secondAttribute="trailing" constant="8" id="qPf-Hr-a8p"/>
                             <constraint firstItem="l6E-bB-vKX" firstAttribute="top" secondItem="Gai-5q-NWa" secondAttribute="top" id="qjk-wy-dTH"/>
                             <constraint firstItem="Xpv-ho-UoX" firstAttribute="leading" secondItem="yc0-re-72F" secondAttribute="trailing" constant="5" id="tfo-BT-8AW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GJy-EU-YRg" secondAttribute="trailing" constant="14" id="vQa-B4-uzM"/>
@@ -252,7 +253,7 @@
                         <outlet property="fluidGoalLabel" destination="GJy-EU-YRg" id="pMb-8D-taY"/>
                         <outlet property="fluidUnit" destination="EbH-QY-WKi" id="rxg-jD-wAM"/>
                         <outlet property="fluidsConsumedLabel" destination="wEN-ia-PKP" id="14b-6s-p8G"/>
-                        <outlet property="fluidsRemainingLabel" destination="g2A-hB-OKu" id="6fW-Ke-nMN"/>
+                        <outlet property="fluidsRemainingLabel" destination="dMS-vA-gIA" id="6wa-Ig-yv1"/>
                         <outlet property="radialFluids" destination="waL-9T-r2f" id="7GC-vb-4fe"/>
                     </connections>
                 </viewController>
@@ -377,6 +378,60 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="848.64130434782612"/>
         </scene>
+        <!--Unit View Controller-->
+        <scene sceneID="CNA-Rs-E6s">
+            <objects>
+                <viewController id="OoY-Bv-AJ8" customClass="UnitViewController" customModule="Fluid_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LsH-Hu-DJK"/>
+                        <viewControllerLayoutGuide type="bottom" id="bKA-VU-Hcy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1V2-2S-JTZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOQ-9B-nBJ">
+                                <rect key="frame" x="55" y="245" width="86" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ounces">
+                                    <color key="titleColor" red="0.43242566929999998" green="0.94777421480000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="oz:" destination="OoY-Bv-AJ8" eventType="touchUpInside" id="gxM-92-NZa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vN6-IO-mPs">
+                                <rect key="frame" x="220" y="245.5" width="85" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Milliliter">
+                                    <color key="titleColor" red="0.82958698269999998" green="0.15649922669999999" blue="0.19602477560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ml:" destination="OoY-Bv-AJ8" eventType="touchUpInside" id="FC1-S0-UiT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurement of unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pap-Gm-f7o">
+                                <rect key="frame" x="68.5" y="81" width="238" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pap-Gm-f7o" firstAttribute="top" secondItem="LsH-Hu-DJK" secondAttribute="bottom" constant="61" id="8FN-fm-d47"/>
+                            <constraint firstItem="LOQ-9B-nBJ" firstAttribute="baseline" secondItem="vN6-IO-mPs" secondAttribute="baseline" id="CKt-3p-gkp"/>
+                            <constraint firstItem="LOQ-9B-nBJ" firstAttribute="leading" secondItem="1V2-2S-JTZ" secondAttribute="leadingMargin" constant="39" id="Pgw-yE-ETd"/>
+                            <constraint firstItem="bKA-VU-Hcy" firstAttribute="top" secondItem="LOQ-9B-nBJ" secondAttribute="bottom" constant="380" id="UOW-eV-z01"/>
+                            <constraint firstItem="Pap-Gm-f7o" firstAttribute="centerX" secondItem="1V2-2S-JTZ" secondAttribute="centerX" id="fn8-DD-ISF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vN6-IO-mPs" secondAttribute="trailing" constant="54" id="wJJ-Z6-Xbx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8A-n1-EC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="-593"/>
+        </scene>
         <!--Add Subtract View Controller-->
         <scene sceneID="8Gb-JU-WxB">
             <objects>
@@ -466,7 +521,6 @@
                     </view>
                     <connections>
                         <outlet property="addSubtractButton" destination="Ww4-WJ-JCJ" id="X7I-Al-9ah"/>
-                        <outlet property="calorieField" destination="Vqi-k9-gKq" id="vyd-Ay-f8Z"/>
                         <outlet property="fluidField" destination="Vqi-k9-gKq" id="NUp-W6-X2w"/>
                         <outlet property="heightConstraint" destination="tGw-Og-ALh" id="X4D-FE-dlW"/>
                         <outlet property="textFieldBottom" destination="z9E-4P-6dR" id="rVw-L2-jaH"/>
