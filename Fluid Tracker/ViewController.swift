@@ -94,6 +94,9 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calculateAverage()
+        if let unit = UserDefaults.standard.string(forKey: "measurementUnit") {
+            fluidUnit.text = unit
+        }
     }
     
     // Called when application resigns active, used for handling dates
